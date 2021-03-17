@@ -1,0 +1,30 @@
+{
+  "name": "@talentan/tools",
+  "version": "0.1.0",
+  "description": "tools for self use",
+  "main": "src/index.js",
+  "files": [
+    "bin",
+    "src"
+  ],
+  "bin": {
+    "talentan": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talentAN/tools.git"
+  },
+  "author": "az15921869329@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/talentAN/tools/issues"
+  },
+  "homepage": "https://github.com/talentAN/tools#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^7.1.0"
+  }
+}
