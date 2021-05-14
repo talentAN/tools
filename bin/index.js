@@ -9,5 +9,9 @@ const program = new Command('talentan').version(packageJson.version);
 program.command('resuffix <origin_suffix> <target_suffix>', '批量修改后缀', {
   executableFile: '../src/resuffix'
 });
+// 修改开发环境host
+program.command('switch-env', '修改host指向', {
+  executableFile: '../src/switchSensorsHost'
+});
 
 program.parse(process.argv);

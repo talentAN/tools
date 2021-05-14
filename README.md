@@ -23,4 +23,7 @@ npm install @talentan/tools -g
 talentan resuffix doc txt // 把当前文件夹下(不包括子文件夹)的 *.doc重命名成 *.txt
 talentan resuffix doc txt -a // 把文件夹下(包括子文件夹)的 *.doc重命名成 *.txt
 
+// 切换开发、联调、测试、演示环境
+talentan sensors-debug
+
 ```
