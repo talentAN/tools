@@ -40,7 +40,9 @@ const move = ({ path_from, path_to, count_per_dir = 30 }) => {
 };
 
 move({
-  path_from: '/Users/aalocal/Downloads/橙子_手机_20221106',
-  path_to: '/Users/aalocal/Downloads/橙子_手机照片备份_20221106',
+  path_from: '/Users/aalocal/Downloads/测试',
+  path_to: '/Users/aalocal/Downloads/移动',
   count_per_dir: 30
 });
+
+// 3D旋转变换效果、火影片尾曲模拟
