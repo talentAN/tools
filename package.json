@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "tools for self use",
   "main": "src/index.js",
+  "type": "module",
   "files": [
     "bin",
     "src"
@@ -26,6 +27,7 @@
   "homepage": "https://github.com/talentAN/tools#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "commander": "^7.1.0"
+    "commander": "^7.1.0",
+    "node-fetch": "^3.3.1"
   }
 }
