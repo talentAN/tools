@@ -1,0 +1,19 @@
+# @format
+
+node:
+  n:
+    安装:
+      - npm install n -g
+      - n -V
+    安装版本: sudo n 14.14.0
+    切换版本:
+      - n
+      - 上下键操作
+      - n ls-remote 11
+    删除版本: sudo n rm 10.13.1
+  node源:
+    - yarn config get registry
+    - yarn config set registry https://registry.npm.taobao.org/
+
+linux:
+  - scp -rp /home/deploy/nocobase-sd/nocobase/. root@10.129.31.11:/sensorsdata/main/program/sdd/nocobase_app/nocobase/
