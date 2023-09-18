@@ -17,3 +17,34 @@ node:
 
 linux:
   - scp -rp /home/deploy/nocobase-sd/nocobase/. root@10.129.31.11:/sensorsdata/main/program/sdd/nocobase_app/nocobase/
+
+定开环境:
+curl -v --location --request POST 'http://10.130.14.224:8107/api/v2/sbp/navigation/menu ' \
+--header 'token: ' \
+--header 'Content-Type: application/json' \
+-d '{
+    "name":{
+        "zh_cn":"商城小程序",
+        "en_us":"SHOP_MINIPROGRAM",
+        "zh_tw":"商城小程序"
+    },
+    "code":"SHOP_MINIPROGRAM",
+    "tip":{
+        "zh_cn":"商城小程序",
+        "en_us":"商城小程序",
+        "zh_tw":"商城小程序",
+        "ja":"商城小程序",
+        "th":"商城小程序"
+    },
+    "register_source":"SBP",
+    "url":"/shop-miniprogram",  // 填写嵌套了 iframe 的 web 路由
+    "menu_type":"CLASSIFICATION",
+    "open_mode":"SELF",
+    "help_url":"",
+    "enabled":true,
+    "feature":"",
+    "priority":0,
+    "operation_codes":[
+        "98000"
+    ]
+}'
