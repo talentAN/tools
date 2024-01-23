@@ -17,6 +17,7 @@ node:
 
 linux:
   - scp -rp /home/deploy/nocobase-sd/nocobase/. root@10.129.31.11:/sensorsdata/main/program/sdd/nocobase_app/nocobase/
+  - 查找文件夹位置 find / -name 'nocobase' -type d
 
 定开环境:
 curl -v --location --request POST 'http://10.130.14.224:8107/api/v2/sbp/navigation/menu ' \

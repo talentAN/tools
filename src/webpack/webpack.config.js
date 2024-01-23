@@ -2,12 +2,17 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    shared: 'lodash'
+  },
   output: {
-    filename: 'bundle.js',
+    clean: true,
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -47,9 +52,23 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: '管理输出'
-    })
+    }),
+    new BundleAnalyzerPlugin()
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    moduleIds: 'deterministic',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
   }
 };
